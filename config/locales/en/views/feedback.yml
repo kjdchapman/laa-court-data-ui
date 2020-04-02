@@ -1,0 +1,11 @@
+---
+en:
+  feedback:
+    page_title: Help us improve this service
+    satisfaction_level: Overall, how satisfied were you with this service?
+    satisfaction_levels:
+      very_satisfied: Very Satisfied
+      satisfied: Satisfied
+      neither_satisfied_nor_disatisfied: Neith satisfied nor disatisfied
+      disatisfied: Disatisfied
+      very_disatisfied: Very disatisfied

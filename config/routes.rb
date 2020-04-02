@@ -38,6 +38,8 @@ Rails.application.routes.draw do
     patch 'update_password', on: :member
   end
 
+  resources :feedback, only: %i[new]
+
   get 'cookies', to: 'help#cookies'
 
   get 'ping', to: 'status#ping', format: :json
