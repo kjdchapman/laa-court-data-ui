@@ -1,18 +1,18 @@
-= form_with(url: '/feedback', local: true) do |f|
-
+= form_with model: @feedback, local: true do |f|
+  
   = f.govuk_text_area :experience,
-    label: { text: 'Tell us about your experience of using this service today.' },
-    hint_text: 'Don\'t include any personal or sensitive information.',
+    label: { text: t('feedback.experience_label') },
+    hint_text: t('feedback.experience_hint'),
     rows: 5
 
   = f.govuk_text_field :email,
-    label: { text: 'What is your email address? (Optional)' },
-    hint_text: 'We will need your email address to be able to respond to your message.'
+    label: { text: t('feedback.email_label') },
+    hint_text: t('feedback.email_hint')
 
-  = f.govuk_collection_radio_buttons :satisfaction_level,
-    [['5', 'Very Satisfied'], ['4', 'Satisfied'], ['3', 'Neither Satisfied Nor Disatisfied'], ['2', 'Disatisfied'], ['1', 'Very Disatisfied']],
+  = f.govuk_collection_radio_buttons :rating,
+    Feedback::RATINGS,
     :first,
     :last,
-    legend: { text: 'Overall, how satisfied were you with this service?', size: 's' }
+    legend: { text: t('feedback.ratings_label'), size: 's' }
  
   = f.govuk_submit( t('generic.continue') )

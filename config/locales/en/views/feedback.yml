@@ -2,10 +2,8 @@
 en:
   feedback:
     page_title: Help us improve this service
-    satisfaction_level: Overall, how satisfied were you with this service?
-    satisfaction_levels:
-      very_satisfied: Very Satisfied
-      satisfied: Satisfied
-      neither_satisfied_nor_disatisfied: Neith satisfied nor disatisfied
-      disatisfied: Disatisfied
-      very_disatisfied: Very disatisfied
+    experience_label: Tell us about your experience of using this service today.
+    experience_hint: Don't include any personal or sensitive information.
+    email_label: What is your email address? (Optional)
+    email_hint: We will need your email address to be able to respond to your message.
+    ratings_label: Overall, how satisfied were you with this service?
