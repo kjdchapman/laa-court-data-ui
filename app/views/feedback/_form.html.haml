@@ -1,8 +1,8 @@
-= form_with model: @feedback, local: true do |f|
-  
-  = f.govuk_text_area :experience,
-    label: { text: t('feedback.experience_label') },
-    hint_text: t('feedback.experience_hint'),
+= form_with model: @feedback, url: feedback_index_path, local: true do |f|
+  = f.govuk_error_summary
+  = f.govuk_text_area :comment,
+    label: { text: t('feedback.comment_label') },
+    hint_text: t('feedback.comment_hint'),
     rows: 5
 
   = f.govuk_text_field :email,
