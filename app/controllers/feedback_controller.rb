@@ -11,6 +11,7 @@ class FeedbackController < ApplicationController
   def create
     @feedback = Feedback.new feedback_params
     if @feedback.valid?
+      FeedbackMailer.notify(feedback_params[:email], feedback_params[:rating], feedback_params[:comment]).deliver_later!
       redirect_to new_feedback_path, notice: 'Your feedback has been submitted'
     else
       render new_feedback_path
